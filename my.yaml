@@ -1,0 +1,15 @@
+kafka:
+  services: 1.1.123.121:9092, 1.1.123.122:9092, 1.1.123.123:9092
+  topic: cs_lm
+consul:
+  ttl: 30
+  lock_name: kafka-cs-lm-lock
+  path: kafka03/cs/lm/
+kakou:
+  host: kong01.service.consul
+  port: 8000
+  path: /cs-lm
+  apikey: abc
+  name: csLm
+  step: 1000
+  kkdd: '441324000'
